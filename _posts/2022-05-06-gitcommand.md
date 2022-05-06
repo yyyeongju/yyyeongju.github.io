@@ -7,8 +7,8 @@ categories: github
 
 # 1. git 명령어 모음
 
-![testimage]("C:\Users\pureb\Downloads\2022-05-06 110940.png")
-![testimage]( "C:\Users\pureb\Downloads\test.png" )
+![2022-05-06 110940](https://user-images.githubusercontent.com/100461744/167056993-225fffd4-fe72-4c6c-8b89-eadf7fe8cf9a.png)
+
 ### **Git 설치 (for ubuntu)
 
 1) 터미널 (ctrl + Alt + T)  
