@@ -1,0 +1,31 @@
+# 1.로지스틱회귀
+
+### 선형회귀 방식을 분류에 적용한 알고리즘/ 회귀가 선형인가 비선형인가는 독립변수가 아닌 가중치 변수가 선형인지 아닌지를 따른다.
+
+### 시그모이드 함수롤 최적선을 찾고 이 함수의 반환 값을 확률로 간주해 확률에 따라 분류를 결정
+
+  
+  
+
+from  sklearn.linear_model  import  LogisticRegression
+
+LogisticRegression(penalty="l2", dual=False, tol=0.0001, C=1, fit_intercept=True, intercept_scaling=1, class_weight=None, random_state=None, solver="lbfgs", max_iter=100, multi_class="auto", verbose=0, warm_start=False, n_jobs=None, l1_ratio=None)
+
+  
+  **penalty** : 규제에 사용 된 기준을 지정(l1(라쏘),l2(릿지),elasticnet,none) -default=l2
+**dual** : 이중 또는 초기 공식
+**tol** : 정밀도
+**C** : penalty에 대한 계수 설정, 높을 수록 복잡한 모델에 대한 규제 강화 -default = 1
+**fit_intercept **: 모형에 상수항 (절편)이 있는가 없는가를 결정하는 인수 -default=True
+**intercept_scaling** : 정규화 효과 정도
+**class_weight** : 클래스에 부여할 가중치 -default=None
+							  : {class label:weight}형태의 딕셔너리 형태로 전달 or 		  'balnced'선택: 각 class에 n_samples / (n_classes * np.bincount(y)) 로 weight를 줌
+* np.bincount() = 정수형태의 행렬에서 각각의 빈도수를 세는데 사용되는 메소드로 0~가장 큰 값까지 각각의 발생 빈도수 체크
+**random_state** : 난수 seed 지정하여 실행시마다 결과를 고정하는 역할
+**solver** : 최적화 문제에 사용하는 알고리즘(‘newton-cg’, ‘lbfgs’, ‘liblinear’, ‘sag’, ‘saga’) -default ='lbfgs'
+**max_iter** : 반복 횟수/ Gradient Descent 방식으로 최적의 해를 구하는 하이퍼 파라미터 default -100
+**multi_class** : 다중 분류 시에 사용(ovr(이항), multinomial(다항식), auto)
+**verbose**: 동작 과정에 대한 출력 메세지
+**warm_start** : 이전 모델을 초기화로 적합하게 사용할 것인지 여부
+**n_jobs** : 병렬 처리 시 사용되는 CPU 코어 수
+**l1_ratio**: L1 규제의 비율(Elastic-Net 믹싱 파라미터 경우에만 사용)
